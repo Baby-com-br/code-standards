@@ -1,0 +1,561 @@
+@charset "UTF-8";
+/*********************************************************************
+*
+*  Functions Module
+*
+*  Custom functions used by the application
+*
+*********************************************************************/
+/*********************************************************************
+*
+*  Base » Variables
+*
+*  All constants that will be used though the styles must be
+*  defined here.
+*
+*********************************************************************/
+/*********************************************************************
+*
+*  Base » Mixins
+*
+*  All general purpose mixins are defined here.
+*
+*********************************************************************/
+/*********************************************************************
+*  =Clearfix
+*********************************************************************/
+/*********************************************************************
+*  =Image replacement
+*
+*  `display` property should be declare on the element, not here
+*  on the mixin. Element must have fixed width and height.
+*********************************************************************/
+/*********************************************************************
+*  =Colorful links
+*
+*  Provide a set of colors for normal, :visited, :hover, and :active
+*  links, based on a base color. Should be used like this:
+*
+*  .my-class a {
+*    @include colorful-links(#abcdef);
+*  }
+*********************************************************************/
+/*******************************************************************************
+*
+*  Core » Reset
+*
+*  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+*  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+*  html5doctor.com/html-5-reset-stylesheet/
+*
+*******************************************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+audio:not([controls]) {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/*******************************************************************************
+*
+*  Core » Typography
+*
+*  Contains all typographical elements styles.
+*
+*******************************************************************************/
+/* 16px / 16px - 100% */
+body {
+  font: normal normal 100%/1.5em sans-serif; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+abbr {
+  text-transform: lowercase; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+small {
+  font-size: 85%; }
+
+strong, th {
+  font-weight: bold; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+ul, ol, dd {
+  margin-bottom: 1.5em;
+  margin-left: 1.5em; }
+
+ol {
+  list-style: inside decimal; }
+
+ul {
+  list-style: inside disc; }
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0; }
+
+ul li,
+ol li {
+  margin-bottom: 0.5em; }
+
+ul li li,
+ol li li {
+  margin-bottom: 0; }
+
+p {
+  margin-bottom: 1.5em; }
+
+p + p {
+  margin-top: -0.3em; }
+
+pre {
+  padding: 15px;
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+blockquote {
+  padding-left: 1.5em;
+  border-left: 3px solid #b55e5e;
+  margin-left: 4.5em;
+  font-style: italic;
+  margin-bottom: 1.5em; }
+
+/*********************************************************************
+*  =Headers
+*********************************************************************/
+h1 {
+  font: normal normal 3em/1em sans-serif;
+  margin-bottom: 0.75em; }
+
+h2 {
+  font: normal normal 2em/1em sans-serif;
+  margin-bottom: 1em; }
+
+h3 {
+  font: normal normal 1.5em/1em sans-serif;
+  margin-bottom: 1em; }
+
+h4 {
+  font: normal normal 1.125em/0.88889em sans-serif;
+  margin-bottom: 1.33333em; }
+
+/*******************************************************************************
+*
+*  Core » Basic
+*
+*  Contains all main base styles and resets
+*
+*******************************************************************************/
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  background: #fff; }
+
+body,
+select {
+  color: #333333; }
+
+/*********************************************************************
+*  =Links
+*********************************************************************/
+a, a:visited {
+  color: #2d96d1;
+  text-decoration: underline; }
+
+a:hover {
+  color: #76bbff; }
+
+a:active {
+  color: #0058ae; }
+
+a:focus {
+  outline: thin dotted; }
+
+/*********************************************************************
+*  =Selection
+*********************************************************************/
+::-moz-selection {
+  background: #4cabdb;
+  color: white;
+  text-shadow: none; }
+
+::selection {
+  background: #4cabdb;
+  color: white;
+  text-shadow: none; }
+
+/*********************************************************************
+*  =Media
+*********************************************************************/
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+/* Correct overflow not hidden in IE9 */
+svg:not(:root) {
+  overflow: hidden; }
+
+/*********************************************************************
+*  =Navigation
+*********************************************************************/
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0; }
+
+/*******************************************************************************
+*
+*  Layout » Main
+*
+*******************************************************************************/
+#container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2em; }
+
+/*********************************************************************
+*  =Styles for Pygments
+*
+*  More info here: https://github.com/mojombo/jekyll/wiki/Install
+*  And here:       http://pygments.org/
+*********************************************************************/
+.hll {
+  background-color: #ffffcc; }
+
+.c {
+  color: #408080;
+  font-style: italic; }
+
+/* Comment */
+.err {
+  border: 1px solid red; }
+
+/* Error */
+.k {
+  color: #008000;
+  font-weight: bold; }
+
+/* Keyword */
+.o {
+  color: #666666; }
+
+/* Operator */
+.cm {
+  color: #408080;
+  font-style: italic; }
+
+/* Comment.Multiline */
+.cp {
+  color: #bc7a00; }
+
+/* Comment.Preproc */
+.c1 {
+  color: #408080;
+  font-style: italic; }
+
+/* Comment.Single */
+.cs {
+  color: #408080;
+  font-style: italic; }
+
+/* Comment.Special */
+.gd {
+  color: #a00000; }
+
+/* Generic.Deleted */
+.ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+.gr {
+  color: red; }
+
+/* Generic.Error */
+.gh {
+  color: #000080;
+  font-weight: bold; }
+
+/* Generic.Heading */
+.gi {
+  color: #00a000; }
+
+/* Generic.Inserted */
+.go {
+  color: gray; }
+
+/* Generic.Output */
+.gp {
+  color: #000080;
+  font-weight: bold; }
+
+/* Generic.Prompt */
+.gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+.gu {
+  color: #800080;
+  font-weight: bold; }
+
+/* Generic.Subheading */
+.gt {
+  color: #0040d0; }
+
+/* Generic.Traceback */
+.kc {
+  color: #008000;
+  font-weight: bold; }
+
+/* Keyword.Constant */
+.kd {
+  color: #008000;
+  font-weight: bold; }
+
+/* Keyword.Declaration */
+.kn {
+  color: #008000;
+  font-weight: bold; }
+
+/* Keyword.Namespace */
+.kp {
+  color: green; }
+
+/* Keyword.Pseudo */
+.kr {
+  color: #008000;
+  font-weight: bold; }
+
+/* Keyword.Reserved */
+.kt {
+  color: #b00040; }
+
+/* Keyword.Type */
+.m {
+  color: #666666; }
+
+/* Literal.Number */
+.s {
+  color: #ba2121; }
+
+/* Literal.String */
+.na {
+  color: #7d9029; }
+
+/* Name.Attribute */
+.nb {
+  color: green; }
+
+/* Name.Builtin */
+.nc {
+  color: #0000FF;
+  font-weight: bold; }
+
+/* Name.Class */
+.no {
+  color: #880000; }
+
+/* Name.Constant */
+.nd {
+  color: #aa22ff; }
+
+/* Name.Decorator */
+.ni {
+  color: #999999;
+  font-weight: bold; }
+
+/* Name.Entity */
+.ne {
+  color: #D2413A;
+  font-weight: bold; }
+
+/* Name.Exception */
+.nf {
+  color: blue; }
+
+/* Name.Function */
+.nl {
+  color: #a0a000; }
+
+/* Name.Label */
+.nn {
+  color: #0000FF;
+  font-weight: bold; }
+
+/* Name.Namespace */
+.nt {
+  color: #008000;
+  font-weight: bold; }
+
+/* Name.Tag */
+.nv {
+  color: #19177c; }
+
+/* Name.Variable */
+.ow {
+  color: #AA22FF;
+  font-weight: bold; }
+
+/* Operator.Word */
+.w {
+  color: #bbbbbb; }
+
+/* Text.Whitespace */
+.mf {
+  color: #666666; }
+
+/* Literal.Number.Float */
+.mh {
+  color: #666666; }
+
+/* Literal.Number.Hex */
+.mi {
+  color: #666666; }
+
+/* Literal.Number.Integer */
+.mo {
+  color: #666666; }
+
+/* Literal.Number.Oct */
+.sb {
+  color: #ba2121; }
+
+/* Literal.String.Backtick */
+.sc {
+  color: #ba2121; }
+
+/* Literal.String.Char */
+.sd {
+  color: #BA2121;
+  font-style: italic; }
+
+/* Literal.String.Doc */
+.s2 {
+  color: #ba2121; }
+
+/* Literal.String.Double */
+.se {
+  color: #BB6622;
+  font-weight: bold; }
+
+/* Literal.String.Escape */
+.sh {
+  color: #ba2121; }
+
+/* Literal.String.Heredoc */
+.si {
+  color: #BB6688;
+  font-weight: bold; }
+
+/* Literal.String.Interpol */
+.sx {
+  color: green; }
+
+/* Literal.String.Other */
+.sr {
+  color: #bb6688; }
+
+/* Literal.String.Regex */
+.s1 {
+  color: #ba2121; }
+
+/* Literal.String.Single */
+.ss {
+  color: #19177c; }
+
+/* Literal.String.Symbol */
+.bp {
+  color: green; }
+
+/* Name.Builtin.Pseudo */
+.vc {
+  color: #19177c; }
+
+/* Name.Variable.Class */
+.vg {
+  color: #19177c; }
+
+/* Name.Variable.Global */
+.vi {
+  color: #19177c; }
+
+/* Name.Variable.Instance */
+.il {
+  color: #666666; }
+
+/* Literal.Number.Integer.Long */
