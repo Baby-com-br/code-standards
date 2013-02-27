@@ -1,0 +1,15 @@
+/*******************************************************************************
+*
+*  Layout » Main
+*
+*******************************************************************************/
+
+body {
+  background-color: #fefefa;
+}
+
+#container {
+  width: perc(800px, $CONTEXT_SITE_WIDTH);
+  margin: 0 auto;
+  padding-top: em(64px, $CONTEXT_FONT_SIZE);
+}

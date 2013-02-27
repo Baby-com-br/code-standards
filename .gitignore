@@ -1,0 +1,9 @@
+_site/*
+
+Thumbs.db
+.DS_STORE
+
+.rbenv-version
+.rvmrc
+
+.sass-cache/
