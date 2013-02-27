@@ -6,6 +6,9 @@
 @import "core/typography";
 @import "core/basic";
 
-@import "layout/main";
+@import "ui/buttons";
 
-@import "components/pygments"
+@import "layout/main";
+@import "layout/sections";
+
+@import "components/pygments";

@@ -55,14 +55,14 @@ ol li li { margin-bottom: 0; }
 
 p { margin-bottom: 1.5em; }
 
-p + p { margin-top: -0.3em; }
-
 pre {
-  padding: 15px;
+  padding: 1em;
+  margin: 0 0 1.5em;
   white-space: pre; /* CSS2 */
   white-space: pre-wrap; /* CSS 2.1 */
-  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word; /* IE */
+  background: #fefefa;
+  border: 1px solid #ececec;
 }
 
 blockquote {
@@ -78,22 +78,47 @@ blockquote {
 *  =Headers
 *********************************************************************/
 
+h1, h2, h3, h4 {
+  font-family: "Museo Sans", "Gill Sans", sans-serif;
+}
+
 h1 {
-  font: normal normal em(48px, $CONTEXT_FONT_SIZE)/em(48px, 48px) sans-serif;
-  margin-bottom: em(36px, 48px);
+  font-size: em(56px, $CONTEXT_FONT_SIZE);
+  font-weight: 500;
+  line-height: em(56px, 56px);
+  margin-bottom: em(48px, 56px);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
-  font: normal normal em(32px, $CONTEXT_FONT_SIZE)/em(32px, 32px) sans-serif;
-  margin-bottom: em(32px, 32px);
+  font-size: em(44px, $CONTEXT_FONT_SIZE);
+  font-weight: 500;
+  line-height: em(44px, 44px);
+  margin-bottom: em(32px, 44px);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
-  font: normal normal em(24px, $CONTEXT_FONT_SIZE)/em(24px, 24px) sans-serif;
-  margin-bottom: em(24px, 24px);
+  border-bottom: 1px solid adjust-color($TEXT-COLOR, $lightness: +20%);
+  font-size: em(32px, $CONTEXT_FONT_SIZE);
+  font-weight: 500;
+  line-height: em(32px, 32px);
+  margin-bottom: em(32px, 32px);
+  padding-bottom: em(8px, 32px);
 }
 
 h4 {
-  font: normal normal em(18px, $CONTEXT_FONT_SIZE)/em(16px, 18px) sans-serif;
-  margin-bottom: em(24px, 18px);
+  font-size: em(24px, $CONTEXT_FONT_SIZE);
+  font-weight: 500;
+  line-height: em(24px, 24px);
+  margin-bottom: em(24px, 24px);
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1em;
 }

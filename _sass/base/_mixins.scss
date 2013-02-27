@@ -58,3 +58,13 @@
   &:hover   { color: adjust-color($color, $lightness: +10%); }
   &:active  { color: adjust-color($color, $lightness: -5%); }
 }
+
+
+/*********************************************************************
+*  =Box sizing
+*********************************************************************/
+
+@mixin box-sizing($property) {
+  -moz-box-sizing: $property;
+       box-sizing: $property;
+}

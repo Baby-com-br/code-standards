@@ -40,6 +40,9 @@
 *    @include colorful-links(#abcdef);
 *  }
 *********************************************************************/
+/*********************************************************************
+*  =Box sizing
+*********************************************************************/
 /*******************************************************************************
 *
 *  Core » Reset
@@ -171,19 +174,17 @@ ol li li {
 p {
   margin-bottom: 1.5em; }
 
-p + p {
-  margin-top: -0.3em; }
-
 pre {
-  padding: 15px;
+  padding: 1em;
+  margin: 0 0 1.5em;
   white-space: pre;
   /* CSS2 */
   white-space: pre-wrap;
   /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word;
-  /* IE */ }
+  /* IE */
+  background: #fefefa;
+  border: 1px solid #ececec; }
 
 blockquote {
   padding-left: 1.5em;
@@ -195,21 +196,44 @@ blockquote {
 /*********************************************************************
 *  =Headers
 *********************************************************************/
+h1, h2, h3, h4 {
+  font-family: "Museo Sans", "Gill Sans", sans-serif; }
+
 h1 {
-  font: normal normal 3em/1em sans-serif;
-  margin-bottom: 0.75em; }
+  font-size: 3.5em;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 0.85714em;
+  text-align: center;
+  text-transform: uppercase; }
 
 h2 {
-  font: normal normal 2em/1em sans-serif;
-  margin-bottom: 1em; }
+  font-size: 2.75em;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 0.72727em;
+  text-align: center;
+  text-transform: uppercase; }
 
 h3 {
-  font: normal normal 1.5em/1em sans-serif;
-  margin-bottom: 1em; }
+  border-bottom: 1px solid #888888;
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.25em; }
 
 h4 {
-  font: normal normal 1.125em/0.88889em sans-serif;
-  margin-bottom: 1.33333em; }
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 1em; }
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1em; }
 
 /*******************************************************************************
 *
@@ -223,12 +247,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-body {
-  background: #fff; }
-
 body,
 select {
-  color: #333333; }
+  color: #555555; }
 
 /*********************************************************************
 *  =Links
@@ -281,13 +302,119 @@ nav ol {
 
 /*******************************************************************************
 *
+*  UI » Buttons
+*
+*******************************************************************************/
+/*********************************************************************
+*  =Primary action button
+*********************************************************************/
+.primary-bt {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #905194;
+  border-radius: 4px;
+  border: 1px solid #713677;
+  box-shadow: 0 3px 0 #713677;
+  color: #fffafa;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Museo Sans", "Gill Sans", sans-serif;
+  font-size: 1.125em;
+  height: 2.22222em;
+  line-height: 2.22222em;
+  padding: 0 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  z-index: 2; }
+
+.primary-bt:hover {
+  background: #905194;
+  box-shadow: 0 -1px 0 #713677, 0 2px 0 #713677;
+  color: #fffafa;
+  position: relative;
+  top: 1px;
+  text-decoration: none; }
+
+.primary-bt:active {
+  background: #905194;
+  box-shadow: 0 -3px 0 #713677;
+  color: #fffafa;
+  position: relative;
+  top: 3px;
+  text-decoration: none; }
+
+.primary-bt:visited {
+  color: #fffafa;
+  text-decoration: none; }
+
+.primary-bt.disabled {
+  background: #e5e5e5 !important;
+  box-shadow: 0 3px 0 #d9d9d9 !important;
+  text-shadow: 0 -1px 0 #878787, 0 1px 0 #f0f0f0 !important;
+  color: #fcfcfc !important;
+  border-color: #d9d9d9 !important;
+  position: relative;
+  top: 0 !important;
+  cursor: default; }
+
+/*******************************************************************************
+*
 *  Layout » Main
 *
 *******************************************************************************/
+body {
+  background-color: #fefefa; }
+
 #container {
   width: 80%;
   margin: 0 auto;
-  padding-top: 2em; }
+  padding-top: 4em; }
+
+/*******************************************************************************
+*
+*  Layout » Sections
+*
+*******************************************************************************/
+/*********************************************************************
+*  =Home
+*********************************************************************/
+.page-home .primary-bt {
+  width: 100%;
+  max-width: 18.75em;
+  padding-left: 0;
+  padding-right: 0; }
+
+.guide-link {
+  text-align: center; }
+
+/*********************************************************************
+*  =Guides
+*********************************************************************/
+.page-guide h2 ~ h2 {
+  padding-top: 1em; }
+
+.page-guide h3 ~ h3 {
+  padding-top: 0.66667em; }
+
+.page-guide h5 {
+  padding-top: 1em; }
+
+.page-guide h2 ~ p {
+  margin-left: 1.5em; }
+
+.page-guide h4 {
+  margin-left: 1em; }
+
+.page-guide h5 {
+  margin-left: 1.5em; }
+
+.page-guide pre {
+  margin-left: 3em;
+  margin-right: 3em; }
 
 /*********************************************************************
 *  =Styles for Pygments
