@@ -11,6 +11,6 @@ standards, tips, and good practices that we use in our projects and we
 believe to be the best to build a maintainable, readable, and reusable
 codebase.
 
-<p class="guide-link"><a href="#" class="primary-bt disabled">View Front-end Guide (soon!)</a></p>
+<p class="guide-link"><a href="front_end.html" class="primary-bt">View Front-end Guide</a></p>
 
 <p class="guide-link"><a href="#" class="primary-bt disabled">View Ruby Guide (soon!)</a></p>

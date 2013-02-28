@@ -22,22 +22,20 @@
 *********************************************************************/
 
 .page-guide h2 ~ h2 {
-  padding-top: em(32px, 32px);
+  padding-top: em(32px, 44px);
 }
 
 .page-guide h3 ~ h3 {
-  padding-top: em(16px, 24px);
+  padding-top: em(32px, 32px);
+}
+
+.page-guide h4 ~ h4 {
+  padding-top: em(24px, 24px);
 }
 
 .page-guide h5 {
   padding-top: em(16px, 16px);
 }
-
-.page-guide h2 ~ p {
-  margin-left: 1.5em;
-}
-
-.page-guide h4 { margin-left: em(24px, 24px); }
 
 .page-guide h5 { margin-left: em(24px, 16px); }
 

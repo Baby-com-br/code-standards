@@ -395,19 +395,16 @@ body {
 *  =Guides
 *********************************************************************/
 .page-guide h2 ~ h2 {
-  padding-top: 1em; }
+  padding-top: 0.72727em; }
 
 .page-guide h3 ~ h3 {
-  padding-top: 0.66667em; }
+  padding-top: 1em; }
+
+.page-guide h4 ~ h4 {
+  padding-top: 1em; }
 
 .page-guide h5 {
   padding-top: 1em; }
-
-.page-guide h2 ~ p {
-  margin-left: 1.5em; }
-
-.page-guide h4 {
-  margin-left: 1em; }
 
 .page-guide h5 {
   margin-left: 1.5em; }
